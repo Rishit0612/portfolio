@@ -121,8 +121,8 @@
         <ul>
           <li><strong>The Need:</strong> A DPIIT-recognized construction marketplace required a unified mobile ecosystem connecting high-volume B2C retail consumers with enterprise B2B building material suppliers.</li>
           <li><strong>The Architectural Split:</strong> Developing two distinct apps meant tackling opposing engineering problems: high-speed visual discovery & conversion (Consumer) vs. complex multi-step data entry & business analytics (Supplier).</li>
-          <li><strong>Consumer App Challenges (B2C Speed & UX):</strong> Focused on front-end rendering performance and checkout friction. Engineered infinite-scroll catalog caching for buttery-smooth 60fps scrolling, robust cart/wishlist state management with <strong>Riverpod</strong>, and integrated <strong>Razorpay</strong> payments.</li>
-          <li><strong>Supplier App Challenges (B2B Enterprise Data):</strong> Focused on heavy relational data & business operations. Engineered deep multi-step inventory onboarding forms with rigorous client-side validation, variant pricing rules, and real-time financial KPI dashboards synced via <strong>Supabase</strong>.</li>
+          <li><strong>Consumer App (Challenge & Solution):</strong> Heavy image assets and complex product catalogs caused UI thread jank and checkout friction. <em>Solved by</em> engineering asynchronous image caching & infinite-scroll pagination for 60fps performance, managing reactive cart/wishlist state with <strong>Riverpod</strong>, and integrating <strong>Razorpay</strong>.</li>
+          <li><strong>Supplier App (Challenge & Solution):</strong> Multi-step B2B inventory onboarding and price-variant rules caused data entry errors and desynced analytics. <em>Solved by</em> building multi-step form workflows with rigorous client-side validation and real-time interactive KPI dashboards synced securely via <strong>Supabase</strong>.</li>
         </ul>
       </div>
     </section>
