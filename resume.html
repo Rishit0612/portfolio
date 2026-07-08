@@ -10,7 +10,7 @@
     :root {
       --primary: #0f172a;
       --secondary: #334155;
-      --accent: #2563eb;
+      --accent: #1d4ed8; /* Strong distinct blue for links */
       --text: #1e293b;
       --light-text: #64748b;
       --bg: #ffffff;
@@ -23,7 +23,7 @@
       background: #e2e8f0;
       color: var(--text);
       line-height: 1.35;
-      font-size: 9.3pt; /* Perfectly fills 1 page with rich bullets */
+      font-size: 9.3pt; /* Perfectly calibrated 1-page A4 */
     }
 
     .resume-container {
@@ -37,20 +37,29 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
+    /* Distinct Blue Links */
+    a {
+      color: #1d4ed8 !important;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover {
+      color: #1e40af !important;
+    }
+
     /* Print settings */
     @page { size: A4; margin: 0; }
     @media print {
       body { background: #fff; }
       .resume-container { margin: 0; padding: 9mm 13mm; box-shadow: none; min-height: 297mm; max-height: 297mm; overflow: hidden; }
-      a { color: var(--accent); text-decoration: none; }
+      a { color: #1d4ed8 !important; text-decoration: underline !important; font-weight: 600; }
     }
 
     /* Header */
     header { text-align: center; margin-bottom: 3.2mm; border-bottom: 1.5px solid var(--primary); padding-bottom: 2.5mm; }
     header h1 { font-size: 21pt; font-weight: 700; color: var(--primary); margin-bottom: 1mm; letter-spacing: -0.5px; }
     .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.8mm 3mm; font-size: 8.8pt; color: var(--secondary); }
-    .contact-info a { color: var(--secondary); text-decoration: none; }
-    .contact-info a:hover { color: var(--accent); }
 
     /* Sections */
     section { margin-bottom: 2.8mm; }
@@ -60,7 +69,7 @@
     .entry { margin-bottom: 2.2mm; }
     .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.7mm; }
     .entry-title { font-size: 10.2pt; font-weight: 700; color: var(--primary); }
-    .entry-subtitle { font-size: 9.3pt; font-weight: 600; color: var(--accent); font-style: italic; }
+    .entry-subtitle { font-size: 9.3pt; font-weight: 600; color: #0f172a; font-style: italic; }
     .entry-date { font-size: 8.8pt; font-weight: 500; color: var(--light-text); text-align: right; }
     
     .entry ul { padding-left: 4.5mm; margin-top: 0.8mm; }
@@ -69,7 +78,7 @@
     /* Skills */
     .skills-grid { display: grid; grid-template-columns: 100%; gap: 1mm; }
     .skill-item { display: flex; }
-    .skill-cat { font-weight: 700; width: 30mm; color: var(--primary); }
+    .skill-cat { font-weight: 700; width: 32mm; color: var(--primary); }
     .skill-desc { color: var(--secondary); flex: 1; }
 
   </style>
@@ -104,68 +113,63 @@
     </section>
 
     <section>
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">Experience & Mobile App Delivery</h2>
       
       <div class="entry">
         <div class="entry-header">
           <div>
-            <span class="entry-title">Software Developer Intern</span>
+            <span class="entry-title">Software Developer Intern (Mobile & Systems)</span>
             <span class="entry-subtitle"> | BuildBazaarX</span>
             <span style="font-size: 0.82rem; margin-left: 6px;">
-              (<a href="https://github.com/Rishit0612/BuildBazaarX_app" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub Consumer</a> · 
-              <a href="https://github.com/p4bl0-26/builderbzar-Supplier-" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub Supplier</a>)
+              [<a href="https://github.com/Rishit0612/BuildBazaarX_app" target="_blank">Consumer App Codebase</a> · 
+              <a href="https://github.com/p4bl0-26/builderbzar-Supplier-" target="_blank">Supplier App Codebase</a>]
             </span>
           </div>
           <span class="entry-date">June 2026 – Present</span>
         </div>
         <ul>
-          <li><strong>The Need:</strong> A DPIIT-recognized construction marketplace required a unified mobile ecosystem connecting high-volume B2C retail consumers with enterprise B2B building material suppliers.</li>
-          <li><strong>The Architectural Split:</strong> Developing two distinct apps meant tackling opposing engineering problems: high-speed visual discovery & conversion (Consumer) vs. complex multi-step data entry & business analytics (Supplier).</li>
-          <li><strong>Consumer App (Challenge & Solution):</strong> Heavy image assets and complex product catalogs caused UI thread jank and checkout friction. <em>Solved by</em> engineering asynchronous image caching & infinite-scroll pagination for 60fps performance, managing reactive cart/wishlist state with <strong>Riverpod</strong>, and integrating <strong>Razorpay</strong>.</li>
+          <li><strong>Rapid Mobile App Delivery:</strong> Engineered and shipped production-ready Android & iOS cross-platform applications using <strong>Flutter & Dart</strong> for a DPIIT-recognized marketplace under strict sprint deadlines.</li>
+          <li><strong>Consumer App (Challenge & Solution):</strong> Heavy image assets and complex product catalogs caused UI thread jank and checkout friction. <em>Solved by</em> engineering asynchronous image caching & infinite-scroll pagination for buttery-smooth 60fps performance, managing reactive cart/wishlist state with <strong>Riverpod</strong>, and integrating <strong>Razorpay</strong>.</li>
           <li><strong>Supplier App (Challenge & Solution):</strong> Multi-step B2B inventory onboarding and price-variant rules caused data entry errors and desynced analytics. <em>Solved by</em> building multi-step form workflows with rigorous client-side validation and real-time interactive KPI dashboards synced securely via <strong>Supabase</strong>.</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Projects & Published Codebases</h2>
 
       <div class="entry">
         <div class="entry-header">
           <div>
-            <span class="entry-title">Veritas</span>
-            <span class="entry-subtitle"> | Web3, Monad, Next.js, Solidity</span>
+            <span class="entry-title">Sortd — Cross-Platform Mobile Utility App</span>
+            <span class="entry-subtitle"> | Flutter, Dart, Supabase, Provider</span>
             <span style="font-size: 0.82rem; margin-left: 6px;">
-              (<a href="https://github.com/p4bl0-26/veritas" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a> · 
-              <a href="https://veritas-beta-green.vercel.app/" target="_blank" style="color: var(--accent); text-decoration: none;">Live Demo</a>)
+              [<a href="https://github.com/Rishit0612/Sortd" target="_blank">Mobile App Repository</a>]
             </span>
           </div>
-          <span class="entry-date">Nexora'26 Top Leaderboard</span>
+          <span class="entry-date">Personal Mobile Production App</span>
         </div>
         <ul>
-          <li><strong>The Need:</strong> To combat AI-generated fake reality, the internet required an immutable "lie-detector" and decentralized registry for digital truth.</li>
-          <li><strong>The Experience & Challenges:</strong> Executed a grueling 9+ hour hackathon sprint under immense pressure, combining Web3 immutability with AI perceptual forensics.</li>
-          <li>Conquered rigorous technical hurdles including complex Solidity smart contract deployment, Wagmi/viem integration, and severe SSR hydration bugs in Next.js.</li>
-          <li>Topped the public Round 1 leaderboard at Nexora'26. Learned the critical reality check that while clean code is essential, pitching effectively under pressure is what ultimately sells the vision.</li>
+          <li><strong>End-to-End App Engineering:</strong> Engineered a full-featured campus mobile ecosystem combining class schedule tracking, assignment deadlines, and peer-to-peer expense splitting (Udhaari).</li>
+          <li><strong>Challenge & Solution:</strong> Delivered a reliable local-first mobile architecture with battery-efficient, timezone-aware background push notifications and two-way real-time data sync via <strong>Supabase</strong>.</li>
+          <li>Integrated <strong>fl_chart</strong> to parse complex expense data and render interactive financial analytics instantly on mobile screens.</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-header">
           <div>
-            <span class="entry-title">Sortd</span>
-            <span class="entry-subtitle"> | Flutter, Supabase, Provider</span>
+            <span class="entry-title">Veritas — Full-Stack Decentralized Application</span>
+            <span class="entry-subtitle"> | Next.js, Web3, Monad, Solidity</span>
             <span style="font-size: 0.82rem; margin-left: 6px;">
-              (<a href="https://github.com/Rishit0612/Sortd" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a>)
+              [<a href="https://github.com/p4bl0-26/veritas" target="_blank">GitHub Repo</a> · 
+              <a href="https://veritas-beta-green.vercel.app/" target="_blank">Live Web Demo</a>]
             </span>
           </div>
-          <span class="entry-date">Personal Utility</span>
+          <span class="entry-date">Nexora'26 Top Leaderboard</span>
         </div>
         <ul>
-          <li><strong>The Need:</strong> Students demanded a unified ecosystem to solve campus life, spanning scattered class schedules, assignment deadlines, and messy shared expenses (Udhaari).</li>
-          <li><strong>The Experience & Challenges:</strong> Engineered a local-first architecture and conquered the critical hurdle of delivering reliable, battery-efficient, timezone-aware background push notifications.</li>
-          <li>Engineered an advanced two-way data sync via <strong>Supabase</strong> featuring conflict resolution to rigorously prevent financial data mismatches between peers.</li>
-          <li>Mastered <strong>fl_chart</strong> to parse heavy data points and render highly interactive, smooth financial expense visualizations instantly.</li>
+          <li>Executed an intense 9+ hour hackathon sprint under tight delivery constraints, building an immutable AI perceptual forensics registry and topping the public Round 1 leaderboard at Nexora'26.</li>
         </ul>
       </div>
     </section>
@@ -174,26 +178,26 @@
       <h2 class="section-title">Technical Skills</h2>
       <div class="skills-grid">
         <div class="skill-item">
-          <div class="skill-cat">Languages:</div>
-          <div class="skill-desc">C/C++, Dart, Solidity, JavaScript, TypeScript, HTML/CSS.</div>
+          <div class="skill-cat">Mobile & App Dev:</div>
+          <div class="skill-desc">Flutter, Dart, Cross-Platform Android & iOS Architecture, Riverpod, Provider, UI/UX 60fps Optimization.</div>
         </div>
         <div class="skill-item">
-          <div class="skill-cat">Frameworks:</div>
-          <div class="skill-desc">Flutter, Next.js, Riverpod, Provider, Wagmi/viem.</div>
+          <div class="skill-cat">Backend & Systems:</div>
+          <div class="skill-desc">Supabase (PostgreSQL, Auth, Realtime, RLS), Next.js, Firebase, Razorpay Integration, Git, GitHub.</div>
         </div>
         <div class="skill-item">
-          <div class="skill-cat">Tools & Cloud:</div>
-          <div class="skill-desc">Supabase, Firebase, Git, GitHub, Foundry, Razorpay.</div>
+          <div class="skill-cat">Core Languages:</div>
+          <div class="skill-desc">Dart, C/C++, JavaScript, TypeScript, Solidity, HTML/CSS.</div>
         </div>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Achievements</h2>
+      <h2 class="section-title">Achievements & Problem Solving</h2>
       <div class="entry">
         <ul>
-          <li><strong>Competitive Programming:</strong> Solved <strong>196+ problems</strong> on Codeforces with a maximum consistent daily streak of 35 days, focusing on Data Structures and Algorithms proficiency.</li>
-          <li><strong>Hackathons:</strong> Led the team that topped the Round 1 Public Leaderboard at Nexora'26 among hundreds of participants.</li>
+          <li><strong>Algorithmic Problem Solving:</strong> Solved <strong>196+ problems</strong> on Codeforces (35-day streak), demonstrating strong DSA foundations for writing optimized, bug-free application logic.</li>
+          <li><strong>Rapid Delivery Record:</strong> Proven track record of shipping end-to-end applications within compressed timelines (production intern releases & top hackathon leaderboards).</li>
         </ul>
       </div>
     </section>
