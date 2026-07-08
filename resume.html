@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishit - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --text: #1e293b;
+      --light-text: #64748b;
+      --bg: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e2e8f0;
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 11pt; /* Ideal for A4 print */
+    }
+
+    .resume-container {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--bg);
+      margin: 20px auto;
+      padding: 12mm 15mm; /* Standard margins */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Print settings */
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .resume-container { margin: 0; padding: 12mm 15mm; box-shadow: none; min-height: auto; }
+      a { color: var(--accent); text-decoration: none; }
+    }
+
+    /* Header */
+    header { text-align: center; margin-bottom: 6mm; border-bottom: 2px solid var(--primary); padding-bottom: 4mm; }
+    header h1 { font-size: 24pt; font-weight: 700; color: var(--primary); margin-bottom: 2mm; letter-spacing: -0.5px; }
+    .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 3mm 4mm; font-size: 10pt; color: var(--secondary); }
+    .contact-info a { color: var(--secondary); text-decoration: none; }
+    .contact-info a:hover { color: var(--accent); }
+
+    /* Sections */
+    section { margin-bottom: 5mm; }
+    .section-title { font-size: 14pt; font-weight: 700; color: var(--primary); border-bottom: 1px solid #cbd5e1; padding-bottom: 1mm; margin-bottom: 3mm; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    /* Entries */
+    .entry { margin-bottom: 4mm; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1mm; }
+    .entry-title { font-size: 12pt; font-weight: 700; color: var(--primary); }
+    .entry-subtitle { font-size: 11pt; font-weight: 600; color: var(--accent); font-style: italic; }
+    .entry-date { font-size: 10pt; font-weight: 500; color: var(--light-text); text-align: right; }
+    
+    .entry ul { padding-left: 5mm; margin-top: 1.5mm; }
+    .entry li { margin-bottom: 1.2mm; text-align: justify; }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: 100%; gap: 1.5mm; }
+    .skill-item { display: flex; }
+    .skill-cat { font-weight: 700; width: 35mm; color: var(--primary); }
+    .skill-desc { color: var(--secondary); flex: 1; }
+
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    
+    <header>
+      <h1>Rishit</h1>
+      <div class="contact-info">
+        <a href="mailto:rishit.0612@gmail.com">rishit.0612@gmail.com</a> | 
+        <a href="tel:+919555254407">+91-9555254407</a> | 
+        <a href="https://www.linkedin.com/in/rishit-pandey-537446376/" target="_blank">linkedin/rishit-pandey-537446376</a> | 
+        <a href="https://github.com/Rishit0612" target="_blank">github/Rishit0612</a> | 
+        <a href="https://codeforces.com/profile/rishit.612" target="_blank">codeforces/rishit.612</a>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">The LNM Institute of Information Technology (LNMIIT)</span>
+            <span class="entry-subtitle"> | Jaipur, India</span>
+          </div>
+          <span class="entry-date">Expected Graduation</span>
+        </div>
+        <ul>
+          <li>Bachelor of Technology in Computer Science and Engineering.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Software Developer Intern</span>
+            <span class="entry-subtitle"> | BuildBazaarX</span>
+            <div style="font-size: 0.85rem; margin-top: 2px;">
+              <a href="https://github.com/Rishit0612/BuildBazaarX_app" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub (Consumer App)</a> | 
+              <a href="https://github.com/p4bl0-26/builderbzar-Supplier-" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub (Supplier App)</a>
+            </div>
+          </div>
+          <span class="entry-date">Recent</span>
+        </div>
+        <ul>
+          <li><strong>The Need:</strong> A DPIIT-recognized construction marketplace required a seamless, cross-platform mobile ecosystem for both consumers and B2B suppliers.</li>
+          <li><strong>The Experience & Challenges:</strong> Architecting this dual-ecosystem meant solving fundamentally different engineering problems for B2C vs B2B users.</li>
+          <li><strong>Consumer App Challenges:</strong> The primary hurdle was front-end performance. Optimizing heavy UI assets and large product lists was critical to achieving a buttery-smooth 60fps scrolling experience. Handled complex cart/wishlist state management with <strong>Riverpod</strong> and integrated <strong>Razorpay</strong>.</li>
+          <li><strong>Supplier App Challenges:</strong> The B2B side was a data-heavy beast. The challenge was engineering deep, multi-step product listing workflows with extensive client-side validation, and building interactive financial dashboards synced in real-time via <strong>Supabase</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Veritas</span>
+            <span class="entry-subtitle"> | Web3, Monad, Next.js, Solidity</span>
+            <div style="font-size: 0.85rem; margin-top: 2px;">
+              <a href="https://github.com/p4bl0-26/veritas" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a> | 
+              <a href="https://veritas-beta-green.vercel.app/" target="_blank" style="color: var(--accent); text-decoration: none;">Live Demo (Frontend Only)</a>
+            </div>
+          </div>
+          <span class="entry-date">Nexora'26</span>
+        </div>
+        <ul>
+          <li><strong>The Need:</strong> To combat AI-generated fake reality, the internet required an immutable "lie-detector" and decentralized registry for digital truth.</li>
+          <li><strong>The Experience & Challenges:</strong> Executed a grueling 9+ hour hackathon sprint under immense time pressure, successfully combining Web3 immutability with AI perceptual forensics.</li>
+          <li>Conquered rigorous technical hurdles including complex Solidity smart contract deployment, Wagmi/viem integration, and severe SSR hydration bugs in Next.js.</li>
+          <li>Topped the public Round 1 leaderboard at Nexora'26. Learned the critical reality check that while clean code is essential, pitching effectively under pressure is what ultimately sells the vision.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Sortd</span>
+            <span class="entry-subtitle"> | Flutter, Supabase, Provider</span>
+            <div style="font-size: 0.85rem; margin-top: 2px;">
+              <a href="https://github.com/Rishit0612/Sortd" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a>
+            </div>
+          </div>
+          <span class="entry-date">Personal Utility</span>
+        </div>
+        <ul>
+          <li><strong>The Need:</strong> Students demanded a unified ecosystem to solve the chaotic reality of campus life, spanning scattered class schedules, missed assignment deadlines, and messy shared expenses (Udhaari).</li>
+          <li><strong>The Experience & Challenges:</strong> Engineered a robust local-first architecture and conquered the critical hurdle of delivering reliable, battery-efficient, timezone-aware background push notifications.</li>
+          <li>Engineered an advanced two-way data sync via <strong>Supabase</strong> featuring complex conflict resolution to rigorously prevent financial data mismatches between peers.</li>
+          <li>Mastered <strong>fl_chart</strong> to parse heavy data points and render highly interactive, smooth financial expense visualizations instantly.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-cat">Languages:</div>
+          <div class="skill-desc">C/C++, Dart, Solidity, JavaScript, TypeScript, HTML/CSS.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-cat">Frameworks:</div>
+          <div class="skill-desc">Flutter, Next.js, Riverpod, Provider, Wagmi/viem.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-cat">Tools & Cloud:</div>
+          <div class="skill-desc">Supabase, Firebase, Git, GitHub, Foundry, Razorpay.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Achievements</h2>
+      <div class="entry">
+        <ul>
+          <li><strong>Competitive Programming:</strong> Solved <strong>196+ problems</strong> on Codeforces with a maximum consistent daily streak of 35 days, showcasing strong data structures and algorithms proficiency.</li>
+          <li><strong>Hackathons:</strong> Led the team that topped the Round 1 Public Leaderboard at Nexora'26 among hundreds of participants.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
