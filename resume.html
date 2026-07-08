@@ -22,8 +22,8 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #e2e8f0;
       color: var(--text);
-      line-height: 1.38;
-      font-size: 9.5pt; /* Calibrated strictly for 1-page A4 */
+      line-height: 1.35;
+      font-size: 9.3pt; /* Perfectly fills 1 page with rich bullets */
     }
 
     .resume-container {
@@ -33,7 +33,7 @@
       overflow: hidden;
       background: var(--bg);
       margin: 20px auto;
-      padding: 10mm 14mm;
+      padding: 9mm 13mm;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
@@ -41,33 +41,33 @@
     @page { size: A4; margin: 0; }
     @media print {
       body { background: #fff; }
-      .resume-container { margin: 0; padding: 10mm 14mm; box-shadow: none; min-height: 297mm; max-height: 297mm; overflow: hidden; }
+      .resume-container { margin: 0; padding: 9mm 13mm; box-shadow: none; min-height: 297mm; max-height: 297mm; overflow: hidden; }
       a { color: var(--accent); text-decoration: none; }
     }
 
     /* Header */
-    header { text-align: center; margin-bottom: 4mm; border-bottom: 1.5px solid var(--primary); padding-bottom: 3mm; }
-    header h1 { font-size: 22pt; font-weight: 700; color: var(--primary); margin-bottom: 1.5mm; letter-spacing: -0.5px; }
-    .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 2mm 3.5mm; font-size: 9pt; color: var(--secondary); }
+    header { text-align: center; margin-bottom: 3.2mm; border-bottom: 1.5px solid var(--primary); padding-bottom: 2.5mm; }
+    header h1 { font-size: 21pt; font-weight: 700; color: var(--primary); margin-bottom: 1mm; letter-spacing: -0.5px; }
+    .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.8mm 3mm; font-size: 8.8pt; color: var(--secondary); }
     .contact-info a { color: var(--secondary); text-decoration: none; }
     .contact-info a:hover { color: var(--accent); }
 
     /* Sections */
-    section { margin-bottom: 3.5mm; }
-    .section-title { font-size: 11.5pt; font-weight: 700; color: var(--primary); border-bottom: 1px solid #cbd5e1; padding-bottom: 0.8mm; margin-bottom: 2mm; text-transform: uppercase; letter-spacing: 0.5px; }
+    section { margin-bottom: 2.8mm; }
+    .section-title { font-size: 11pt; font-weight: 700; color: var(--primary); border-bottom: 1px solid #cbd5e1; padding-bottom: 0.6mm; margin-bottom: 1.8mm; text-transform: uppercase; letter-spacing: 0.5px; }
     
     /* Entries */
-    .entry { margin-bottom: 2.8mm; }
-    .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.8mm; }
-    .entry-title { font-size: 10.5pt; font-weight: 700; color: var(--primary); }
-    .entry-subtitle { font-size: 9.5pt; font-weight: 600; color: var(--accent); font-style: italic; }
-    .entry-date { font-size: 9pt; font-weight: 500; color: var(--light-text); text-align: right; }
+    .entry { margin-bottom: 2.2mm; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.7mm; }
+    .entry-title { font-size: 10.2pt; font-weight: 700; color: var(--primary); }
+    .entry-subtitle { font-size: 9.3pt; font-weight: 600; color: var(--accent); font-style: italic; }
+    .entry-date { font-size: 8.8pt; font-weight: 500; color: var(--light-text); text-align: right; }
     
-    .entry ul { padding-left: 4.5mm; margin-top: 1mm; }
-    .entry li { margin-bottom: 1mm; text-align: justify; }
+    .entry ul { padding-left: 4.5mm; margin-top: 0.8mm; }
+    .entry li { margin-bottom: 0.8mm; text-align: justify; }
 
     /* Skills */
-    .skills-grid { display: grid; grid-template-columns: 100%; gap: 1.2mm; }
+    .skills-grid { display: grid; grid-template-columns: 100%; gap: 1mm; }
     .skill-item { display: flex; }
     .skill-cat { font-weight: 700; width: 30mm; color: var(--primary); }
     .skill-desc { color: var(--secondary); flex: 1; }
@@ -99,7 +99,7 @@
           </div>
           <span class="entry-date">Expected Graduation</span>
         </div>
-        <div style="font-size: 9.5pt; color: var(--secondary);">Bachelor of Technology in Computer Science and Engineering</div>
+        <div style="color: var(--secondary);">Bachelor of Technology in Computer Science and Engineering</div>
       </div>
     </section>
 
@@ -119,9 +119,10 @@
           <span class="entry-date">June 2026 – Present</span>
         </div>
         <ul>
-          <li>Engineered a cross-platform mobile ecosystem (Consumer & Supplier apps) for a DPIIT-recognized construction marketplace using <strong>Flutter & Dart</strong>.</li>
-          <li>Optimized complex UI rendering and heavy product listings to achieve a buttery-smooth 60fps scrolling experience; implemented clean state management via <strong>Riverpod</strong> and integrated <strong>Razorpay</strong> payments.</li>
-          <li>Architected multi-step B2B supplier onboarding workflows and real-time interactive financial dashboards synced seamlessly via <strong>Supabase</strong> (PostgreSQL, Row Level Security, Auth).</li>
+          <li><strong>The Need:</strong> A DPIIT-recognized construction marketplace required a seamless, cross-platform mobile ecosystem for both consumers and B2B suppliers.</li>
+          <li><strong>The Experience & Challenges:</strong> Architecting this dual-ecosystem meant solving fundamentally different engineering problems for B2C vs B2B users.</li>
+          <li><strong>Consumer App Challenges:</strong> Optimizing heavy UI assets and large product lists was critical to achieving a buttery-smooth 60fps scrolling experience. Handled complex cart/wishlist state management with <strong>Riverpod</strong> and integrated <strong>Razorpay</strong>.</li>
+          <li><strong>Supplier App Challenges:</strong> Engineered deep, multi-step product listing workflows with extensive client-side validation, and interactive financial dashboards synced in real-time via <strong>Supabase</strong>.</li>
         </ul>
       </div>
     </section>
@@ -142,8 +143,10 @@
           <span class="entry-date">Nexora'26 Top Leaderboard</span>
         </div>
         <ul>
-          <li>Built an immutable AI-generated fake reality "lie-detector" and decentralized digital truth registry during an intense 9+ hour hackathon sprint.</li>
-          <li>Executed full-stack integration connecting complex Solidity smart contracts on EVM chains with a Next.js frontend via Wagmi/viem and AI perceptual forensics.</li>
+          <li><strong>The Need:</strong> To combat AI-generated fake reality, the internet required an immutable "lie-detector" and decentralized registry for digital truth.</li>
+          <li><strong>The Experience & Challenges:</strong> Executed a grueling 9+ hour hackathon sprint under immense pressure, combining Web3 immutability with AI perceptual forensics.</li>
+          <li>Conquered rigorous technical hurdles including complex Solidity smart contract deployment, Wagmi/viem integration, and severe SSR hydration bugs in Next.js.</li>
+          <li>Topped the public Round 1 leaderboard at Nexora'26. Learned the critical reality check that while clean code is essential, pitching effectively under pressure is what ultimately sells the vision.</li>
         </ul>
       </div>
 
@@ -159,8 +162,10 @@
           <span class="entry-date">Personal Utility</span>
         </div>
         <ul>
-          <li>Engineered a unified campus ecosystem for students combining class schedule tracking, deadline reminders, and peer expense splitting (Udhaari).</li>
-          <li>Architected a local-first application with battery-efficient background push notifications and two-way real-time data synchronization via <strong>Supabase</strong>.</li>
+          <li><strong>The Need:</strong> Students demanded a unified ecosystem to solve campus life, spanning scattered class schedules, assignment deadlines, and messy shared expenses (Udhaari).</li>
+          <li><strong>The Experience & Challenges:</strong> Engineered a local-first architecture and conquered the critical hurdle of delivering reliable, battery-efficient, timezone-aware background push notifications.</li>
+          <li>Engineered an advanced two-way data sync via <strong>Supabase</strong> featuring conflict resolution to rigorously prevent financial data mismatches between peers.</li>
+          <li>Mastered <strong>fl_chart</strong> to parse heavy data points and render highly interactive, smooth financial expense visualizations instantly.</li>
         </ul>
       </div>
     </section>
