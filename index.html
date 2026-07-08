@@ -1646,10 +1646,10 @@
         <div class="nav-contact-wrapper" id="navContactWrapper">
           <button class="nav-cta" onclick="document.getElementById('navContactWrapper').classList.toggle('active')" style="cursor: pointer; border: none; font-family: inherit; font-size: 1rem;">Contact Me ›</button>
           <div class="contact-dropdown">
-            <a href="mailto:rishit.0612@gmail.com"><span class="icon">✉️</span> Email</a>
-            <a href="tel:+919555254407"><span class="icon">📞</span> Call</a>
-            <a href="https://www.linkedin.com/in/rishit-pandey-537446376/" target="_blank" rel="noopener noreferrer"><span class="icon">💼</span> LinkedIn</a>
-            <a href="https://github.com/Rishit0612" target="_blank" rel="noopener noreferrer"><span class="icon">💻</span> GitHub</a>
+            <a href="mailto:rishit.0612@gmail.com" onclick="document.getElementById('navContactWrapper').classList.remove('active')"><span class="icon">✉️</span> Email</a>
+            <a href="tel:+919555254407" onclick="document.getElementById('navContactWrapper').classList.remove('active')"><span class="icon">📞</span> Call</a>
+            <a href="https://www.linkedin.com/in/rishit-pandey-537446376/" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('navContactWrapper').classList.remove('active')"><span class="icon">💼</span> LinkedIn</a>
+            <a href="https://github.com/Rishit0612" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('navContactWrapper').classList.remove('active')"><span class="icon">💻</span> GitHub</a>
           </div>
         </div>
       </nav>
@@ -2419,6 +2419,14 @@
     });
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 7. Close contact dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const wrapper = document.getElementById('navContactWrapper');
+      if (wrapper && !wrapper.contains(e.target)) {
+        wrapper.classList.remove('active');
+      }
     });
   </script>
 </body>
