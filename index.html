@@ -717,9 +717,13 @@
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
+    .services-grid .service-card:nth-child(5):last-child {
+      grid-column: 1 / -1;
+    }
 
     @media (max-width: 768px) {
       .services-grid { grid-template-columns: 1fr; }
+      .services-grid .service-card:nth-child(5):last-child { grid-column: auto; }
     }
 
     .service-card {
@@ -1816,29 +1820,21 @@
           <div class="service-card reveal delay-3">
             <div class="service-num">03.</div>
             <div class="service-body">
-              <h3>Web3 & Smart Contracts</h3>
-              <p>Solidity smart contracts with Foundry, Next.js frontends with Wagmi/viem/RainbowKit, deployed on EVM chains.</p>
+              <h3>Competitive Programming</h3>
+              <p>196+ problems solved on Codeforces with a focus on DSA, algorithmic optimization, and contest-level problem solving.</p>
             </div>
             <div class="service-arrow">↗</div>
           </div>
           <div class="service-card reveal delay-4">
             <div class="service-num">04.</div>
             <div class="service-body">
-              <h3>Competitive Programming</h3>
-              <p>196+ problems solved on Codeforces with a focus on DSA, algorithmic optimization, and contest-level problem solving.</p>
-            </div>
-            <div class="service-arrow">↗</div>
-          </div>
-          <div class="service-card reveal delay-5">
-            <div class="service-num">05.</div>
-            <div class="service-body">
               <h3>Rapid Prototyping</h3>
               <p>Taking complex ideas from 0 to MVP under extreme time pressure, integrating advanced APIs, and delivering competition-ready products.</p>
             </div>
             <div class="service-arrow">↗</div>
           </div>
-          <div class="service-card reveal delay-6">
-            <div class="service-num">06.</div>
+          <div class="service-card reveal delay-5">
+            <div class="service-num">05.</div>
             <div class="service-body">
               <h3>Complex Dashboards</h3>
               <p>Engineering heavy B2B interfaces with extensive form validations, interactive financial visualizations, and robust client-side state management.</p>
